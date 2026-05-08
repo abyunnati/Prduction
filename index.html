@@ -1,331 +1,154 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Abhyunnati</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
-    body{
-      font-family:'Poppins',sans-serif;
-      background:#f5f7fb;
-      color:#001B5C;
-    }
-
-    .main-container{
-      min-height:100vh;
-      display:flex;
-      flex-wrap:wrap;
-    }
-
-    /* LEFT SECTION */
-
-    .left-section{
-      flex:1 1 55%;
-      background:#ffffff;
-      padding:60px;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-    }
-
-    .logo{
-      margin-bottom:30px;
-    }
-
-    .logo h1{
-      font-size:60px;
-      font-weight:700;
-      color:#001B5C;
-    }
-
-    .logo p{
-      color:#D58B00;
-      margin-top:8px;
-      font-size:16px;
-      letter-spacing:1px;
-    }
-
-    .title h2{
-      font-size:52px;
-      line-height:1.2;
-      color:#001B5C;
-      margin-bottom:10px;
-    }
-
-    .title h3{
-      font-size:58px;
-      color:#D58B00;
-      margin-bottom:25px;
-    }
-
-    .description{
-      font-size:20px;
-      line-height:1.8;
-      color:#444;
-      margin-bottom:40px;
-      max-width:700px;
-    }
-
-    /* LEARN BOX */
-
-    .learn-box{
-      width:100%;
-      max-width:650px;
-      border:3px solid #D58B00;
-      border-radius:18px;
-      overflow:hidden;
-      background:#fff;
-      box-shadow:0 10px 25px rgba(0,0,0,0.08);
-    }
-
-    .learn-title{
-      background:#D58B00;
-      color:white;
-      padding:18px;
-      font-size:24px;
-      font-weight:600;
-      text-align:center;
-    }
-
-    .learn-list{
-      list-style:none;
-    }
-
-    .learn-list li{
-      padding:18px 25px;
-      border-bottom:1px solid #eee;
-      font-size:20px;
-      color:#001B5C;
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
-
-    .learn-list li:last-child{
-      border-bottom:none;
-    }
-
-    /* RIGHT SECTION */
-
-    .right-section{
-      flex:1 1 45%;
-      min-height:500px;
-      position:relative;
-      background:
-        linear-gradient(rgba(0,27,92,0.75), rgba(0,27,92,0.75)),
-        url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1600&auto=format&fit=crop');
-      background-size:cover;
-      background-position:center;
-      display:flex;
-      justify-content:center;
-      align-items:flex-end;
-      padding:50px;
-    }
-
-    .expert-card{
-      width:100%;
-      max-width:500px;
-      background:#001B5C;
-      color:white;
-      padding:35px;
-      border-radius:20px;
-      box-shadow:0 15px 35px rgba(0,0,0,0.3);
-      border:2px solid rgba(255,255,255,0.1);
-    }
-
-    .expert-card .small-title{
-      color:#FFB300;
-      font-size:16px;
-      font-weight:600;
-      letter-spacing:1px;
-      margin-bottom:15px;
-    }
-
-    .expert-card h2{
-      font-size:42px;
-      margin-bottom:18px;
-    }
-
-    .expert-card p{
-      font-size:18px;
-      line-height:1.7;
-      color:#f1f1f1;
-    }
-
-    /* CONTACT SECTION */
-
-    .contact-section{
-      width:100%;
-      background:#001B5C;
-      padding:25px;
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:25px;
-    }
-
-    .contact-box{
-      background:#01286f;
-      color:white;
-      padding:18px 28px;
-      border-radius:12px;
-      min-width:280px;
-      text-align:center;
-      box-shadow:0 6px 18px rgba(0,0,0,0.2);
-    }
-
-    .contact-box h4{
-      color:#FFB300;
-      margin-bottom:10px;
-      font-size:16px;
-      letter-spacing:1px;
-    }
-
-    .contact-box p{
-      font-size:18px;
-      word-break:break-word;
-    }
-
-    /* MOBILE RESPONSIVE */
-
-    @media(max-width:992px){
-
-      .main-container{
-        flex-direction:column;
-      }
-
-      .left-section{
-        padding:40px 25px;
-      }
-
-      .right-section{
-        min-height:400px;
-        padding:25px;
-      }
-
-      .logo h1{
-        font-size:42px;
-      }
-
-      .title h2{
-        font-size:34px;
-      }
-
-      .title h3{
-        font-size:38px;
-      }
-
-      .description{
-        font-size:18px;
-      }
-
-      .learn-list li{
-        font-size:18px;
-      }
-
-      .expert-card h2{
-        font-size:32px;
-      }
-
-    }
-
-  </style>
+  <title>Abyunnati | Oracle Fusion Application Project Management</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-  <div class="main-container">
+<header class="topbar">
+  <div class="container topbar-content">
+    <div class="left">
+      <span>📞 +91 94933 94288</span>
+      <span>✉️ support@abyunnati.com</span>
+    </div>
+    <div class="right">
+      <span>Follow Us</span>
+    </div>
+  </div>
+</header>
 
-    <!-- LEFT -->
-
-    <div class="left-section">
-
-      <div class="logo">
-        <h1>Abhyunnati</h1>
-        <p>GROWING TODAY, EMPOWERING TOMORROW</p>
-      </div>
-
-      <div class="title">
-        <h2>Oracle Fusion Application</h2>
-        <h3>Project Management</h3>
-      </div>
-
-      <div class="description">
-        Master Oracle Fusion Application Project Management with conceptual knowledge,
-        real-world business use cases, and practical implementation strategies.
-      </div>
-
-      <div class="learn-box">
-
-        <div class="learn-title">
-          WHAT YOU WILL LEARN
-        </div>
-
-        <ul class="learn-list">
-          <li>✔ Conceptual Knowledge</li>
-          <li>✔ Project Management</li>
-          <li>✔ Oracle Fusion Application</li>
-          <li>✔ Business Use Cases</li>
-          <li>✔ Practical Implementation</li>
-        </ul>
-
-      </div>
-
+<nav class="navbar">
+  <div class="container nav-content">
+    <div class="logo">
+      <img src="logo.png" alt="Abyunnati Logo"/>
     </div>
 
-    <!-- RIGHT -->
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Courses</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Resources</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
 
-    <div class="right-section">
+    <a href="#" class="btn-primary">ENROLL NOW</a>
+  </div>
+</nav>
 
-      <div class="expert-card">
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-left">
+      <p class="tagline">MASTER. IMPLEMENT. SUCCEED.</p>
 
-        <div class="small-title">
-          LEARN FROM INDUSTRY EXPERT
-        </div>
+      <h1>
+        Oracle Fusion Application <br/>
+        Project Management
+      </h1>
 
-        <h2>Shiva Reddy</h2>
+      <p class="hero-text">
+        Master Oracle Fusion Application Project Management with conceptual knowledge,
+        real-world use cases, and practical implementation.
+      </p>
 
-        <p>
-          Gain practical insights and real-time implementation experience
-          from industry professionals working on Oracle Fusion Applications.
-        </p>
-
+      <div class="hero-buttons">
+        <a href="#" class="btn-primary">Explore Courses</a>
+        <a href="#" class="btn-secondary">Watch Intro</a>
       </div>
+    </div>
 
+    <div class="hero-right">
+      <div class="hero-card">
+        <div class="hexagon">📊</div>
+        <div class="hexagon">👥</div>
+        <div class="hexagon">📋</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="container feature-grid">
+    <div class="feature-box">
+      <h3>Expert-Led Learning</h3>
+      <p>Learn from industry professionals</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>Real-World Use Cases</h3>
+      <p>Practical insights you can apply immediately</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>Hands-On Implementation</h3>
+      <p>Gain confidence through real-time projects</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>Career Advancement</h3>
+      <p>Boost your career with in-demand skills</p>
+    </div>
+  </div>
+</section>
+
+<section class="learn-section">
+  <div class="container learn-grid">
+
+    <div class="learn-card">
+      <h2>WHAT YOU LEARN</h2>
+      <ul>
+        <li>Conceptual Knowledge</li>
+        <li>Project Management</li>
+        <li>Oracle Fusion Application</li>
+        <li>Business Use Cases</li>
+        <li>Practical Implementation</li>
+      </ul>
+    </div>
+
+    <div class="expert-card">
+      <h2>LEARN FROM INDUSTRY EXPERT</h2>
+      <p>
+        Gain insights and practical knowledge from experienced professionals.
+      </p>
+    </div>
+
+    <div class="why-card">
+      <h2>WHY CHOOSE ABYUNNATI?</h2>
+      <p>
+        Abyunnati is dedicated to delivering high-quality training and consulting
+        services that empower professionals and organizations to achieve excellence
+        in Oracle Fusion Applications.
+      </p>
     </div>
 
   </div>
+</section>
 
-  <!-- CONTACT -->
-
-  <div class="contact-section">
-
-    <div class="contact-box">
-      <h4>MOBILE</h4>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Mobile</h3>
       <p>+91 94933 94288</p>
     </div>
 
-    <div class="contact-box">
-      <h4>E-MAIL</h4>
+    <div>
+      <h3>E-Mail</h3>
       <p>support@abyunnati.com</p>
     </div>
 
-    <div class="contact-box">
-      <h4>WEBSITE</h4>
+    <div>
+      <h3>Website</h3>
       <p>www.abyunnati.com</p>
     </div>
-
   </div>
+</footer>
 
 </body>
 </html>

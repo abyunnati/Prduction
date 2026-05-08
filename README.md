@@ -1,21 +1,23 @@
-# Abyunnati Corporate Website
+# Abyunnati Production Corporate Website
 
-Premium responsive corporate website built using HTML and CSS.
+Premium responsive corporate website for GitHub deployment.
 
-## Deployment through GitHub Pages
+## Deployment via GitHub Pages
 
-1. Create a new GitHub repository
-2. Upload all project files
-3. Commit and push the code
-4. Go to:
+1. Create a new repository in GitHub
+2. Upload all files
+3. Commit changes
+4. Open:
    Settings → Pages
-5. Under 'Branch', select:
-   main / root
-6. Click Save
+5. Under Source:
+   Deploy from branch
+6. Select:
+   main branch / root
+7. Save
 
-Your website will be deployed automatically.
+Your production website will be live automatically.
 
-## Project Structure
+## Files Included
 
 - index.html
 - style.css
@@ -23,9 +25,9 @@ Your website will be deployed automatically.
 
 ## Features
 
-- Premium corporate layout
-- Responsive design
-- Top-left aligned logo
-- Top-right menu icon
-- Mobile-friendly interface
-- Clean white background
+- Premium corporate UI
+- Responsive production-ready design
+- Colorful enterprise theme
+- Oracle Fusion Project Management branding
+- Contact icons
+- Modern card layout

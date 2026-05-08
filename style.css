@@ -723,3 +723,19 @@ background:linear-gradient(145deg,#174fb6,#4f8fff);
 .participant-card.gold{
 background:linear-gradient(145deg,#d6a52f,#f3d37a);
 }
+
+
+/* REMOVE TRAINING IMAGE */
+
+.trainer-card{
+align-items:flex-start;
+}
+
+.trainer-info{
+width:100%;
+}
+
+.training-top{
+align-items:stretch;
+}
+

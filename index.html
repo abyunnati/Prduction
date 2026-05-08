@@ -4,9 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Abyunnati | Oracle Fusion Application Training</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -15,58 +18,56 @@
 
     body{
       font-family:'Poppins',sans-serif;
-      background: linear-gradient(135deg,#041c4a 0%, #0b2d73 35%, #c89a2b 100%);
+      background:linear-gradient(135deg,#041c4a 0%, #0b2d73 40%, #d9a52b 100%);
       color:white;
       overflow-x:hidden;
     }
 
     .hero{
       min-height:100vh;
-      position:relative;
       padding:30px 70px 60px;
+      position:relative;
       background:
-      radial-gradient(circle at top right, rgba(255,255,255,0.15), transparent 25%),
+      radial-gradient(circle at top right, rgba(255,255,255,0.14), transparent 24%),
       radial-gradient(circle at bottom left, rgba(255,215,0,0.15), transparent 20%);
     }
 
     .top-bar{
+      position:relative;
       display:flex;
       align-items:flex-start;
       justify-content:space-between;
-      position:relative;
     }
 
     .logo{
-      width:220px;
-      height:auto;
-      object-fit:contain;
-      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
-      background: rgba(255,255,255,0.95);
+      width:215px;
+      background:rgba(255,255,255,0.96);
       border-radius:20px;
       padding:12px;
+      object-fit:contain;
+      box-shadow:0 15px 40px rgba(0,0,0,0.25);
     }
 
     .header-center{
       position:absolute;
       left:50%;
       transform:translateX(-50%);
+      top:8px;
       text-align:center;
-      top:10px;
     }
 
     .header-center h1{
-      font-size:2.2rem;
+      font-size:2.3rem;
       font-weight:700;
       letter-spacing:1px;
-      color:#ffffff;
-      text-shadow:0 4px 12px rgba(0,0,0,0.3);
+      text-shadow:0 5px 15px rgba(0,0,0,0.35);
     }
 
     .header-center h2{
+      margin-top:8px;
+      color:#ffd66b;
       font-size:1.4rem;
       font-weight:400;
-      margin-top:8px;
-      color:#f8d77b;
       letter-spacing:2px;
     }
 
@@ -80,34 +81,31 @@
 
     .left-section{
       background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.16);
       backdrop-filter:blur(12px);
-      border:1px solid rgba(255,255,255,0.15);
-      border-radius:28px;
+      border-radius:30px;
       padding:50px;
-      box-shadow:0 20px 50px rgba(0,0,0,0.25);
+      box-shadow:0 25px 60px rgba(0,0,0,0.28);
     }
 
     .left-section h3{
       font-size:2.5rem;
-      margin-bottom:30px;
-      color:#ffd15f;
+      margin-bottom:35px;
+      color:#ffd66b;
       letter-spacing:1px;
     }
 
     .learn-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:22px;
-      margin-top:25px;
+      gap:24px;
     }
 
     .learn-item{
       background:rgba(255,255,255,0.12);
-      border-left:5px solid #ffd15f;
-      padding:20px;
-      border-radius:18px;
-      font-size:1.05rem;
-      font-weight:500;
+      border-left:5px solid #ffd66b;
+      padding:24px;
+      border-radius:20px;
       transition:0.3s ease;
     }
 
@@ -116,13 +114,26 @@
       background:rgba(255,255,255,0.18);
     }
 
+    .learn-item h4{
+      color:#ffffff;
+      font-size:1.1rem;
+      margin-bottom:10px;
+      font-weight:600;
+    }
+
+    .learn-item p{
+      color:#e8edf8;
+      font-size:0.95rem;
+      line-height:1.7;
+    }
+
     .training-visual{
       position:relative;
-      height:560px;
+      height:590px;
       border-radius:30px;
       overflow:hidden;
       background:
-      linear-gradient(rgba(3,17,48,0.75), rgba(3,17,48,0.75)),
+      linear-gradient(rgba(4,22,58,0.76), rgba(4,22,58,0.76)),
       url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
       box-shadow:0 25px 60px rgba(0,0,0,0.35);
       border:1px solid rgba(255,255,255,0.15);
@@ -134,28 +145,28 @@
       left:40px;
       right:40px;
       background:rgba(255,255,255,0.12);
+      border:1px solid rgba(255,255,255,0.16);
       backdrop-filter:blur(10px);
-      border-radius:24px;
+      border-radius:25px;
       padding:30px;
-      border:1px solid rgba(255,255,255,0.18);
     }
 
     .overlay-card h4{
       font-size:2rem;
-      color:#ffd15f;
-      margin-bottom:12px;
+      color:#ffd66b;
+      margin-bottom:15px;
     }
 
     .overlay-card p{
-      line-height:1.7;
-      color:#f3f3f3;
       font-size:1rem;
+      line-height:1.8;
+      color:#f4f4f4;
     }
 
     .footer{
       margin-top:70px;
-      padding:30px 40px;
-      border-top:2px solid rgba(255,255,255,0.15);
+      padding-top:30px;
+      border-top:2px solid rgba(255,255,255,0.12);
       display:flex;
       justify-content:space-between;
       flex-wrap:wrap;
@@ -164,23 +175,29 @@
     }
 
     .about h5{
+      color:#ffd66b;
       font-size:1.4rem;
-      color:#ffd15f;
-      margin-bottom:10px;
+      margin-bottom:12px;
+    }
+
+    .about p{
+      max-width:500px;
+      line-height:1.8;
+      color:#f0f0f0;
     }
 
     .contact{
       text-align:right;
       line-height:2;
-      font-size:1rem;
     }
 
     .contact span{
-      color:#ffd15f;
+      color:#ffd66b;
       font-weight:600;
     }
 
     @media(max-width:1100px){
+
       .content{
         grid-template-columns:1fr;
       }
@@ -204,6 +221,7 @@
     }
 
     @media(max-width:768px){
+
       .hero{
         padding:25px;
       }
@@ -213,7 +231,7 @@
       }
 
       .header-center h1{
-        font-size:1.5rem;
+        font-size:1.6rem;
       }
 
       .header-center h2{
@@ -237,52 +255,104 @@
         text-align:center;
       }
     }
+
   </style>
 </head>
+
 <body>
 
 <section class="hero">
 
   <div class="top-bar">
+
     <img src="logo.png" alt="Abyunnati Logo" class="logo">
 
     <div class="header-center">
       <h1>Oracle Fusion Application</h1>
       <h2>Project Management</h2>
     </div>
+
   </div>
 
   <div class="content">
 
     <div class="left-section">
+
       <h3>WHAT YOU LEARN</h3>
 
       <div class="learn-grid">
-        <div class="learn-item">Conceptual Knowledge</div>
-        <div class="learn-item">Project Management</div>
-        <div class="learn-item">Oracle Fusion Application</div>
-        <div class="learn-item">Business Use Cases</div>
-        <div class="learn-item">Practical Implementation</div>
+
+        <div class="learn-item">
+          <h4>Conceptual Knowledge</h4>
+          <p>
+            Build a strong understanding of Oracle Fusion Project Management concepts,
+            workflows, modules, and enterprise business processes.
+          </p>
+        </div>
+
+        <div class="learn-item">
+          <h4>Project Management</h4>
+          <p>
+            Learn planning, budgeting, execution, monitoring, and project delivery
+            strategies used in modern organizations.
+          </p>
+        </div>
+
+        <div class="learn-item">
+          <h4>Oracle Fusion Application</h4>
+          <p>
+            Gain hands-on exposure to Oracle Fusion Application navigation,
+            configuration, transactions, and reporting capabilities.
+          </p>
+        </div>
+
+        <div class="learn-item">
+          <h4>Business Use Cases</h4>
+          <p>
+            Explore real-time corporate business scenarios and understand how Oracle
+            Fusion solutions are implemented across industries.
+          </p>
+        </div>
+
+        <div class="learn-item">
+          <h4>Practical Implementation</h4>
+          <p>
+            Work with practical examples, implementation activities, and functional
+            exercises to strengthen real-world expertise.
+          </p>
+        </div>
+
       </div>
+
     </div>
 
     <div class="training-visual">
+
       <div class="overlay-card">
+
         <h4>Premium Online Training</h4>
+
         <p>
-          Transform your career with enterprise-level Oracle Fusion Project Management training.
-          Learn through real-world business scenarios, conceptual clarity, and practical implementation
-          delivered in a premium corporate learning environment.
+          Transform your career with enterprise-grade Oracle Fusion Project Management training.
+          Learn through conceptual clarity, business-driven use cases, and practical implementation
+          in a premium corporate learning environment designed for professionals.
         </p>
+
       </div>
+
     </div>
 
   </div>
 
   <div class="footer">
+
     <div class="about">
       <h5>About Abyunnati</h5>
-      <p>Empowering professionals with high-quality Oracle Fusion Application training.</p>
+
+      <p>
+        Abyunnati empowers professionals with premium Oracle Fusion Application training,
+        helping learners gain industry-ready skills through conceptual learning and practical experience.
+      </p>
     </div>
 
     <div class="contact">
@@ -290,6 +360,7 @@
       <div><span>E-Mail:</span> support@abyunnati.com</div>
       <div><span>Website:</span> www.abyunnati.com</div>
     </div>
+
   </div>
 
 </section>

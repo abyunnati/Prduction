@@ -90,177 +90,180 @@ font-weight:600;
 box-shadow:0 15px 35px rgba(23,79,182,0.25);
 }
 
-.training-wrapper{
-height:480px;
+.training-visual{
+height:500px;
 border-radius:40px;
-padding:18px;
+padding:20px;
 background:linear-gradient(145deg,#072c72,#174fb6,#d49a28);
 box-shadow:0 30px 80px rgba(0,0,0,0.12);
 }
 
-.training-scene{
+.meeting-room{
 height:100%;
 border-radius:32px;
+background:linear-gradient(135deg,#0a2a66,#174fb6);
 position:relative;
 overflow:hidden;
-background:
-radial-gradient(circle at top right, rgba(255,255,255,0.15), transparent 30%),
-linear-gradient(135deg,#0d3178,#174fb6);
 padding:35px;
 }
 
-.screen-panel{
-width:75%;
-height:220px;
+.presentation-screen{
+width:78%;
+height:240px;
 background:white;
-border-radius:24px;
-padding:20px;
-box-shadow:0 18px 40px rgba(0,0,0,0.15);
+border-radius:28px;
+padding:18px;
+box-shadow:0 18px 40px rgba(0,0,0,0.18);
 }
 
-.screen-header{
+.screen-top{
 display:flex;
 gap:8px;
-margin-bottom:20px;
+margin-bottom:18px;
 }
 
-.dot{
-width:10px;
-height:10px;
+.screen-top span{
+width:11px;
+height:11px;
 border-radius:50%;
 background:#d49a28;
 }
 
-.screen-content{
+.dashboard{
+display:flex;
+gap:22px;
+height:170px;
+}
+
+.dashboard-left{
+width:45%;
 display:flex;
 flex-direction:column;
-gap:25px;
+gap:14px;
 }
 
-.chart-row{
+.dash-card{
+border-radius:18px;
+}
+
+.big{
+height:95px;
+background:linear-gradient(135deg,#174fb6,#3f7df0);
+}
+
+.small{
+height:55px;
+background:#eef4ff;
+}
+
+.dashboard-right{
+flex:1;
 display:flex;
-align-items:flex-end;
+flex-direction:column;
+justify-content:center;
 gap:16px;
-height:80px;
 }
 
-.chart{
-width:50px;
-border-radius:14px 14px 0 0;
+.progress{
+height:14px;
+border-radius:30px;
 }
 
-.chart.blue{
-height:70px;
-background:#174fb6;
-}
-
-.chart.gold{
-height:50px;
-background:#d49a28;
-}
-
-.chart.white{
-height:90px;
-background:#0b245b;
-}
-
-.progress-line{
-height:10px;
-border-radius:50px;
-margin-bottom:12px;
-}
-
-.one{width:90%;background:#174fb6;}
-.two{width:75%;background:#d49a28;}
-.three{width:55%;background:#dfe8ff;}
+.blue{width:95%;background:#174fb6;}
+.gold{width:72%;background:#d49a28;}
+.white{width:55%;background:#dfe7ff;}
 
 .trainer{
 position:absolute;
-right:50px;
-bottom:60px;
-width:110px;
-height:220px;
+right:55px;
+top:165px;
 }
 
-.head{
+.trainer-head{
 width:58px;
 height:58px;
 border-radius:50%;
-background:#ffd9ba;
-margin:0 auto;
+background:#ffd6b0;
+margin:auto;
 }
 
-.body{
-width:90px;
-height:120px;
+.trainer-body{
+width:92px;
+height:125px;
 background:#d49a28;
-border-radius:24px 24px 10px 10px;
-margin:10px auto 0;
+border-radius:26px 26px 10px 10px;
+margin-top:8px;
 }
 
-.arm{
+.trainer-arm{
 position:absolute;
-top:85px;
-left:-15px;
-width:80px;
+top:88px;
+left:-20px;
+width:85px;
 height:18px;
-background:#ffd9ba;
+background:#ffd6b0;
 border-radius:20px;
-transform:rotate(-20deg);
+transform:rotate(-18deg);
 }
 
-.students{
+.table{
 position:absolute;
 left:45px;
-bottom:35px;
-display:flex;
-gap:18px;
+bottom:80px;
+width:320px;
+height:22px;
+background:#ffffff;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,0.12);
 }
 
-.student{
-width:70px;
-height:95px;
-background:white;
-border-radius:20px 20px 10px 10px;
-position:relative;
-box-shadow:0 10px 25px rgba(0,0,0,0.12);
-}
-
-.student::before{
-content:'';
+.team{
 position:absolute;
-top:-28px;
-left:15px;
-width:40px;
-height:40px;
-border-radius:50%;
-background:#ffd9ba;
+left:60px;
+bottom:95px;
+display:flex;
+gap:32px;
 }
 
-.s1{background:#ffffff;}
-.s2{background:#d49a28;}
-.s3{background:#d9e7ff;}
+.member-head{
+width:42px;
+height:42px;
+border-radius:50%;
+background:#ffd6b0;
+margin:auto;
+margin-bottom:6px;
+}
 
-.floating-card{
+.member-body{
+width:62px;
+height:82px;
+border-radius:20px 20px 10px 10px;
+}
+
+.blue-person{background:#174fb6;}
+.gold-person{background:#d49a28;}
+.white-person{background:#edf3ff;}
+
+.floating-tag{
 position:absolute;
 padding:12px 18px;
 border-radius:14px;
-background:rgba(255,255,255,0.15);
+background:rgba(255,255,255,0.14);
 backdrop-filter:blur(8px);
 color:white;
-font-size:0.9rem;
+font-size:0.88rem;
 font-weight:600;
-border:1px solid rgba(255,255,255,0.18);
+border:1px solid rgba(255,255,255,0.16);
 }
 
-.card1{
-top:35px;
+.one{
+top:30px;
 right:35px;
 }
 
-.card2{
-bottom:30px;
-right:170px;
+.two{
+bottom:28px;
+right:150px;
 }
 
 .learn{
@@ -350,7 +353,6 @@ background:rgba(255,255,255,0.06);
 padding:10px 16px;
 border-radius:14px;
 border:1px solid rgba(255,255,255,0.18);
-box-shadow:0 4px 16px rgba(0,0,0,0.18);
 }
 
 .footer-item span{
@@ -361,10 +363,6 @@ display:flex;
 align-items:center;
 justify-content:center;
 border-radius:50%;
-}
-
-.footer-item p{
-font-weight:600;
 }
 
 @media(max-width:1100px){
@@ -389,17 +387,17 @@ align-items:flex-start;
 font-size:3rem;
 }
 
-.training-wrapper{
+.training-visual{
 height:420px;
 }
 
-.screen-panel{
+.presentation-screen{
 width:100%;
-height:190px;
+height:200px;
 }
 
-.students{
+.team{
 transform:scale(0.8);
-left:0;
+left:10px;
 }
 }

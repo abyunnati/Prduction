@@ -1,14 +1,17 @@
-# Abyunnati Enhanced Corporate Website
+# Abyunnati Ultra Premium Corporate Website
 
-Premium production-ready website for GitHub deployment.
+Enhanced enterprise-grade responsive website.
 
-## Deploy on GitHub Pages
+## Deployment Through GitHub
 
-1. Create GitHub repository
+1. Create GitHub Repository
 2. Upload all files
-3. Commit changes
+3. Commit and Push
 4. Open Settings → Pages
-5. Select main branch / root
-6. Save
+5. Select:
+   Deploy from branch
+6. Choose:
+   main / root
+7. Save
 
-Website will deploy automatically.
+Your production website will be live automatically.

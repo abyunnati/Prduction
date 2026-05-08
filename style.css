@@ -1,3 +1,4 @@
+
 *{
 margin:0;
 padding:0;
@@ -8,6 +9,7 @@ body{
 font-family:'Poppins',sans-serif;
 background:#f7f9fd;
 color:#072c72;
+overflow-x:hidden;
 }
 
 .header{
@@ -85,104 +87,180 @@ color:white;
 text-decoration:none;
 font-size:0.95rem;
 font-weight:600;
+box-shadow:0 15px 35px rgba(23,79,182,0.25);
 }
 
-.training-card{
-height:460px;
-border-radius:38px;
-overflow:hidden;
-background:linear-gradient(135deg,#072c72,#174fb6,#d49a28);
+.training-wrapper{
+height:480px;
+border-radius:40px;
 padding:18px;
-box-shadow:0 25px 70px rgba(0,0,0,0.08);
+background:linear-gradient(145deg,#072c72,#174fb6,#d49a28);
+box-shadow:0 30px 80px rgba(0,0,0,0.12);
 }
 
-.training-image{
+.training-scene{
 height:100%;
-border-radius:28px;
+border-radius:32px;
 position:relative;
-background:
-linear-gradient(rgba(7,44,114,0.78),rgba(7,44,114,0.72)),
-linear-gradient(135deg,#1c4fae,#0c2b68,#d49a28);
-display:flex;
-align-items:flex-end;
-justify-content:space-between;
-padding:40px;
 overflow:hidden;
+background:
+radial-gradient(circle at top right, rgba(255,255,255,0.15), transparent 30%),
+linear-gradient(135deg,#0d3178,#174fb6);
+padding:35px;
 }
 
-.training-content{
-position:relative;
-z-index:2;
-color:white;
-}
-
-.training-content h4{
-font-size:2.5rem;
-margin-bottom:10px;
-}
-
-.training-content p{
-font-size:1rem;
-opacity:0.92;
-}
-
-.people{
-position:relative;
-width:240px;
-height:240px;
-}
-
-.person{
-position:absolute;
-bottom:0;
-width:70px;
-height:170px;
+.screen-panel{
+width:75%;
+height:220px;
 background:white;
-border-radius:40px 40px 12px 12px;
+border-radius:24px;
+padding:20px;
+box-shadow:0 18px 40px rgba(0,0,0,0.15);
 }
 
-.person::before{
-content:'';
-position:absolute;
-top:-45px;
-left:10px;
-width:50px;
-height:50px;
+.screen-header{
+display:flex;
+gap:8px;
+margin-bottom:20px;
+}
+
+.dot{
+width:10px;
+height:10px;
 border-radius:50%;
-background:#f5d2b2;
-}
-
-.person.one{
-left:20px;
 background:#d49a28;
 }
 
-.person.two{
-right:10px;
-background:#ffffff;
+.screen-content{
+display:flex;
+flex-direction:column;
+gap:25px;
 }
 
-.screen{
-position:absolute;
-top:10px;
-left:50px;
-width:140px;
+.chart-row{
+display:flex;
+align-items:flex-end;
+gap:16px;
+height:80px;
+}
+
+.chart{
+width:50px;
+border-radius:14px 14px 0 0;
+}
+
+.chart.blue{
+height:70px;
+background:#174fb6;
+}
+
+.chart.gold{
+height:50px;
+background:#d49a28;
+}
+
+.chart.white{
 height:90px;
-background:#ffffff;
-border-radius:12px;
-border:6px solid #072c72;
+background:#0b245b;
 }
 
-.screen::before{
+.progress-line{
+height:10px;
+border-radius:50px;
+margin-bottom:12px;
+}
+
+.one{width:90%;background:#174fb6;}
+.two{width:75%;background:#d49a28;}
+.three{width:55%;background:#dfe8ff;}
+
+.trainer{
+position:absolute;
+right:50px;
+bottom:60px;
+width:110px;
+height:220px;
+}
+
+.head{
+width:58px;
+height:58px;
+border-radius:50%;
+background:#ffd9ba;
+margin:0 auto;
+}
+
+.body{
+width:90px;
+height:120px;
+background:#d49a28;
+border-radius:24px 24px 10px 10px;
+margin:10px auto 0;
+}
+
+.arm{
+position:absolute;
+top:85px;
+left:-15px;
+width:80px;
+height:18px;
+background:#ffd9ba;
+border-radius:20px;
+transform:rotate(-20deg);
+}
+
+.students{
+position:absolute;
+left:45px;
+bottom:35px;
+display:flex;
+gap:18px;
+}
+
+.student{
+width:70px;
+height:95px;
+background:white;
+border-radius:20px 20px 10px 10px;
+position:relative;
+box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+.student::before{
 content:'';
 position:absolute;
-top:18px;
-left:18px;
-width:90px;
-height:12px;
-background:#174fb6;
-border-radius:20px;
-box-shadow:0 24px 0 #d49a28;
+top:-28px;
+left:15px;
+width:40px;
+height:40px;
+border-radius:50%;
+background:#ffd9ba;
+}
+
+.s1{background:#ffffff;}
+.s2{background:#d49a28;}
+.s3{background:#d9e7ff;}
+
+.floating-card{
+position:absolute;
+padding:12px 18px;
+border-radius:14px;
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(8px);
+color:white;
+font-size:0.9rem;
+font-weight:600;
+border:1px solid rgba(255,255,255,0.18);
+}
+
+.card1{
+top:35px;
+right:35px;
+}
+
+.card2{
+bottom:30px;
+right:170px;
 }
 
 .learn{
@@ -311,11 +389,17 @@ align-items:flex-start;
 font-size:3rem;
 }
 
-.training-card{
-height:380px;
+.training-wrapper{
+height:420px;
 }
 
-.card-grid{
-justify-content:flex-start;
+.screen-panel{
+width:100%;
+height:190px;
+}
+
+.students{
+transform:scale(0.8);
+left:0;
 }
 }

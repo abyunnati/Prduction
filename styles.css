@@ -7,111 +7,113 @@
 
 body{
   font-family:'Poppins', sans-serif;
-  background:#f7f8fa;
+  background:
+    linear-gradient(135deg,#ffffff,#f5f7fb);
   color:#0c1b3a;
   overflow-x:hidden;
 }
 
 .header{
-  min-height:90vh;
-  padding:18px 6%;
-  background:linear-gradient(135deg,#ffffff,#f5f7fa);
+  min-height:92vh;
+  padding:25px 6%;
+  position:relative;
 }
 
-.top-bar{
+.top-section{
   display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap:20px;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
 }
 
 .logo-section{
   display:flex;
-  align-items:flex-start;
+  justify-content:center;
+  align-items:center;
 }
 
 .logo{
-  width:260px;
+  width:250px;
   height:auto;
   object-fit:contain;
   display:block;
-  margin-top:-12px;
-  margin-left:-10px;
 }
 
 .platform-title{
-  flex:1;
-  text-align:center;
-  margin-top:26px;
-  margin-right:170px;
-  color:#c8901c;
+  margin-top:8px;
+  color:#c8911e;
   font-size:1.15rem;
   font-weight:600;
   letter-spacing:2px;
   text-transform:uppercase;
+  text-align:center;
 }
 
 .hero-content{
-  max-width:900px;
-  margin-top:55px;
+  max-width:920px;
+  margin:70px auto 0;
+  text-align:center;
 }
 
 .hero-content h1{
-  font-size:4.6rem;
+  font-size:4.8rem;
   color:#082b74;
-  line-height:1.08;
-  margin-bottom:26px;
+  line-height:1.05;
+  margin-bottom:28px;
   font-weight:700;
 }
 
 .hero-text{
   max-width:760px;
-  color:#607086;
-  font-size:1.1rem;
-  line-height:1.9;
+  margin:0 auto;
+  color:#617188;
+  font-size:1.12rem;
+  line-height:1.95;
 }
 
 .learn-section{
-  padding:80px 5%;
+  padding:85px 5%;
 }
 
 .learn-section h2{
   text-align:center;
-  font-size:2.9rem;
+  font-size:3rem;
   color:#082b74;
-  margin-bottom:55px;
+  margin-bottom:60px;
 }
 
 .cards{
   display:grid;
   grid-template-columns:repeat(5,1fr);
-  gap:22px;
+  gap:24px;
 }
 
 .card{
-  background:#ffffff;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(10px);
   border-radius:28px;
-  padding:30px;
-  box-shadow:0 18px 40px rgba(8,43,116,0.08);
-  border:1px solid rgba(200,144,28,0.08);
+  padding:32px 28px;
+  border:1px solid rgba(200,145,28,0.08);
+  box-shadow:0 18px 45px rgba(8,43,116,0.08);
   transition:0.35s ease;
 }
 
 .card:hover{
   transform:translateY(-10px);
+  box-shadow:0 24px 55px rgba(8,43,116,0.12);
 }
 
 .card h3{
   color:#082b74;
-  font-size:1.15rem;
+  font-size:1.16rem;
   margin-bottom:18px;
-  line-height:1.5;
+  line-height:1.45;
 }
 
 .card p{
-  color:#6b7a90;
-  line-height:1.8;
-  font-size:0.94rem;
+  color:#68788f;
+  line-height:1.82;
+  font-size:0.95rem;
 }
 
 .about-section{
@@ -119,34 +121,36 @@ body{
 }
 
 .about-card{
-  background:linear-gradient(135deg,#082b74,#0c1b3a);
-  border-radius:34px;
-  padding:58px;
+  background:
+    linear-gradient(135deg,#082b74,#0d1f4d);
+  border-radius:36px;
+  padding:60px;
   color:white;
-  box-shadow:0 24px 50px rgba(8,43,116,0.16);
+  box-shadow:0 26px 60px rgba(8,43,116,0.18);
 }
 
 .about-card h2{
-  font-size:2.5rem;
+  font-size:2.6rem;
   margin-bottom:24px;
 }
 
 .about-card p{
-  color:#edf2fa;
-  line-height:1.95;
+  color:#eef3fb;
+  line-height:2;
   font-size:1.05rem;
 }
 
 .footer{
-  padding:0 6% 35px;
+  padding:0 6% 40px;
 }
 
 .footer-line{
   width:100%;
   height:6px;
   border-radius:50px;
-  background:linear-gradient(to right,#082b74 50%,#d8a12a 50%);
-  margin-bottom:30px;
+  background:
+    linear-gradient(to right,#082b74 50%,#d8a22d 50%);
+  margin-bottom:32px;
 }
 
 .contact-info{
@@ -167,16 +171,27 @@ body{
 }
 
 .icon{
-  width:44px;
-  height:44px;
-  border-radius:50%;
+  width:46px;
+  height:46px;
+  border-radius:16px;
   display:flex;
   align-items:center;
   justify-content:center;
   font-size:1rem;
   color:white;
-  background:linear-gradient(135deg,#082b74,#d8a12a);
-  box-shadow:0 12px 24px rgba(8,43,116,0.15);
+  box-shadow:0 12px 24px rgba(8,43,116,0.12);
+}
+
+.phone{
+  background:linear-gradient(135deg,#082b74,#204fa8);
+}
+
+.mail{
+  background:linear-gradient(135deg,#d39a22,#f0bc52);
+}
+
+.web{
+  background:linear-gradient(135deg,#082b74,#d39a22);
 }
 
 @media(max-width:1200px){
@@ -188,31 +203,20 @@ body{
 
 @media(max-width:768px){
 
-  .top-bar{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
   .logo{
-    width:180px;
-    margin-top:0;
-    margin-left:0;
+    width:190px;
   }
 
   .platform-title{
-    width:100%;
-    text-align:center;
-    margin-right:0;
-    margin-top:0;
     font-size:1rem;
   }
 
   .hero-content{
-    margin-top:45px;
+    margin-top:50px;
   }
 
   .hero-content h1{
-    font-size:2.8rem;
+    font-size:2.9rem;
   }
 
   .hero-text{
@@ -229,7 +233,7 @@ body{
   }
 
   .about-card{
-    padding:36px 28px;
+    padding:38px 28px;
   }
 
   .contact-info{

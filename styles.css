@@ -10,8 +10,8 @@ html{
 
 body{
   font-family:'Poppins',sans-serif;
-  background:#081c43;
-  color:#ffffff;
+  background:#ffffff;
+  color:#081c43;
   overflow-x:hidden;
   position:relative;
 }
@@ -380,4 +380,19 @@ body{
 
 h1,h2,h3,h4,h5,h6,p,span,a,li{
   color:#ffffff;
+}
+
+
+h1,h2,h3,h4,h5,h6,p,span,a,li{
+  color:#081c43 !important;
+}
+
+.hero-section,
+.course-card,
+.info-card,
+.feature-card,
+.glass-card{
+  background:#ffffff !important;
+  border:1px solid rgba(8,28,67,0.08);
+  box-shadow:0 10px 30px rgba(8,28,67,0.06);
 }

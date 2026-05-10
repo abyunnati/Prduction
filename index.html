@@ -1,137 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Abyunnati | Oracle Fusion Application</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Abyunnati | Oracle Application Excellence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+    :root{
+        --primary:#03256C;
+        --secondary:#D79A1E;
+        --light:#ffffff;
+        --text:#1c1c1c;
+    }
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
 
-  <link rel="stylesheet" href="styles.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    body{
+        font-family:'Poppins',sans-serif;
+        background:#ffffff;
+        color:var(--text);
+        line-height:1.6;
+    }
+
+    .container{
+        width:90%;
+        max-width:1200px;
+        margin:auto;
+    }
+
+    header{
+        text-align:center;
+        padding:40px 0 20px;
+    }
+
+    header img{
+        width:260px;
+        max-width:90%;
+    }
+
+    .hero{
+        text-align:center;
+        padding:40px 20px 60px;
+    }
+
+    .hero h1{
+        color:var(--primary);
+        font-size:3.4rem;
+        font-weight:700;
+        margin-bottom:18px;
+    }
+
+    .hero p{
+        color:#444;
+        font-size:1.15rem;
+        max-width:800px;
+        margin:auto;
+    }
+
+    .section-title{
+        text-align:center;
+        color:var(--primary);
+        font-size:2.2rem;
+        margin-bottom:40px;
+        font-weight:700;
+    }
+
+    .grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+        gap:25px;
+        margin-bottom:80px;
+    }
+
+    .card{
+        background:#fff;
+        border:1px solid rgba(3,37,108,0.08);
+        border-radius:20px;
+        padding:35px 25px;
+        text-align:center;
+        transition:0.3s ease;
+        box-shadow:0 8px 25px rgba(3,37,108,0.06);
+    }
+
+    .card:hover{
+        transform:translateY(-8px);
+        box-shadow:0 16px 35px rgba(3,37,108,0.12);
+    }
+
+    .icon{
+        width:72px;
+        height:72px;
+        margin:0 auto 18px;
+        border-radius:18px;
+        background:linear-gradient(135deg,var(--primary),var(--secondary));
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        color:#fff;
+        font-size:2rem;
+        font-weight:700;
+    }
+
+    .card h3{
+        color:var(--primary);
+        margin-bottom:12px;
+        font-size:1.2rem;
+    }
+
+    .highlight{
+        background:linear-gradient(135deg, rgba(3,37,108,0.05), rgba(215,154,30,0.10));
+        border-radius:30px;
+        padding:70px 40px;
+        margin-bottom:80px;
+    }
+
+    .two-column{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+        gap:35px;
+    }
+
+    .info-box{
+        background:#fff;
+        border-radius:24px;
+        padding:35px;
+        box-shadow:0 8px 25px rgba(3,37,108,0.08);
+    }
+
+    .info-box h3{
+        color:var(--primary);
+        margin-bottom:15px;
+        font-size:1.6rem;
+    }
+
+    .info-box p,
+    .info-box li{
+        font-size:1rem;
+        color:#444;
+    }
+
+    ul{
+        list-style:none;
+    }
+
+    ul li{
+        margin-bottom:12px;
+        padding-left:30px;
+        position:relative;
+    }
+
+    ul li::before{
+        content:"✦";
+        position:absolute;
+        left:0;
+        color:var(--secondary);
+        font-weight:bold;
+    }
+
+    footer{
+        margin-top:40px;
+        padding:45px 20px;
+        text-align:center;
+        border-top:1px solid rgba(3,37,108,0.08);
+    }
+
+    footer h2{
+        color:var(--primary);
+        margin-bottom:12px;
+    }
+
+    .contact{
+        display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:25px;
+        margin-top:25px;
+    }
+
+    .contact-item{
+        display:flex;
+        align-items:center;
+        gap:10px;
+        color:var(--primary);
+        font-weight:500;
+    }
+
+    .contact-icon{
+        width:42px;
+        height:42px;
+        border-radius:50%;
+        background:linear-gradient(135deg,var(--primary),var(--secondary));
+        color:#fff;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-size:1rem;
+    }
+
+    @media(max-width:768px){
+        .hero h1{
+            font-size:2.4rem;
+        }
+
+        .section-title{
+            font-size:1.8rem;
+        }
+
+        .highlight{
+            padding:40px 20px;
+        }
+    }
+</style>
 </head>
-
 <body>
 
-<header class="header">
-
-  <div class="top-section">
-
-    <div class="logo-section">
-      <img src="logo.png" alt="Abyunnati Logo" class="logo"/>
-    </div>
-
-    <div class="platform-title">
-      Premium Online Learning Platform
-    </div>
-
-  </div>
-
-  <div class="hero-content">
-
-    <h1>Oracle Fusion Application</h1>
-
-    <p class="hero-text">
-      Delivering premium corporate learning experiences with practical Oracle Fusion Application knowledge,
-      project management excellence, and enterprise-focused implementation strategies designed for modern enterprises.
-    </p>
-
-  </div>
-
+<header>
+    <img src="logo.png" alt="Abyunnati Logo">
 </header>
 
-<section class="learn-section">
-
-  <h2>What You Learn</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <h3>Conceptual Knowledge</h3>
-      <p>
-        Build strong enterprise foundations with modern frameworks,
-        governance strategies, methodologies, and digital transformation concepts.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Project Management</h3>
-      <p>
-        Understand planning, execution, monitoring, stakeholder engagement,
-        and delivery techniques aligned with corporate standards.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Oracle Fusion Application</h3>
-      <p>
-        Gain practical Oracle Fusion knowledge including workflows,
-        modules, integrations, reporting, and enterprise implementation practices.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Business Use Cases</h3>
-      <p>
-        Explore realistic enterprise scenarios, business challenges,
-        operational processes, and strategic decision-making approaches.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Practical Implementation</h3>
-      <p>
-        Learn hands-on implementation strategies, optimization methods,
-        execution techniques, and enterprise deployment practices.
-      </p>
-    </div>
-
-  </div>
-
-</section>
-
-<section class="about-section">
-
-  <div class="about-card">
-
-    <h2>About Abyunnati</h2>
-
+<section class="hero container">
+    <h1>Oracle Application Excellence</h1>
     <p>
-      Abyunnati empowers professionals with premium online learning programs focused on
-      Oracle Fusion enterprise application expertise and project management excellence.
-      Our programs combine conceptual depth, business relevance, and practical implementation
-      experience to support career growth in modern corporate environments.
+        Premium online training for Graduates and Working Professionals focused on
+        Project Management and Oracle Fusion Applications with practical business implementation.
     </p>
-
-  </div>
-
 </section>
 
-<footer class="footer">
+<section class="container">
+    <h2 class="section-title">What You Learn</h2>
 
-  <div class="footer-line"></div>
+    <div class="grid">
+        <div class="card">
+            <div class="icon">C</div>
+            <h3>Conceptual Knowledge</h3>
+            <p>Understand core business and enterprise concepts with structured learning.</p>
+        </div>
 
-  <div class="contact-info">
+        <div class="card">
+            <div class="icon">P</div>
+            <h3>Project Management</h3>
+            <p>Master project lifecycle, planning, execution, costing, billing, and control.</p>
+        </div>
 
-    <div class="contact-item">
-      <span class="icon phone"><i class="fa-solid fa-phone"></i></span>
-      <span>+91 94933 94288</span>
+        <div class="card">
+            <div class="icon">O</div>
+            <h3>Oracle Fusion Application</h3>
+            <p>Learn Oracle Fusion applications with real-time business process exposure.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">B</div>
+            <h3>Business Use Cases</h3>
+            <p>Explore industry-oriented scenarios and practical business examples.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">I</div>
+            <h3>Practical Implementation</h3>
+            <p>Gain implementation knowledge and hands-on application understanding.</p>
+        </div>
     </div>
+</section>
 
-    <div class="contact-item">
-      <span class="icon mail"><i class="fa-solid fa-envelope"></i></span>
-      <span>support@abyunnati.com</span>
+<section class="container highlight">
+    <div class="two-column">
+
+        <div class="info-box">
+            <h3>Who Can Attend</h3>
+            <ul>
+                <li>Graduates</li>
+                <li>Working Professionals</li>
+                <li>Career Switchers</li>
+                <li>ERP & Functional Aspirants</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h3>Program Details</h3>
+            <ul>
+                <li>Program Duration: 12 Weeks</li>
+                <li>Industry-Focused Curriculum</li>
+                <li>Practical Learning Approach</li>
+                <li>Professional Mentorship</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h3>After Program</h3>
+            <ul>
+                <li>Application User</li>
+                <li>Application Consultant</li>
+                <li>Business Process Understanding</li>
+                <li>Enterprise Application Knowledge</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h3>About Abyunnati</h3>
+            <p>
+                Abyunnati provides premium Oracle Application training with focus on
+                Project Management and Oracle Fusion Applications for modern enterprise careers.
+            </p>
+        </div>
+
     </div>
+</section>
 
-    <div class="contact-item">
-      <span class="icon web"><i class="fa-solid fa-globe"></i></span>
-      <span>www.abyunnati.com</span>
+<footer>
+    <h2>Connect With Abyunnati</h2>
+
+    <div class="contact">
+        <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <span>+91 94933 94288</span>
+        </div>
+
+        <div class="contact-item">
+            <div class="contact-icon">✉</div>
+            <span>support@abyunnati.com</span>
+        </div>
+
+        <div class="contact-item">
+            <div class="contact-icon">🌐</div>
+            <span>www.abyunnati.com</span>
+        </div>
     </div>
-
-  </div>
-
 </footer>
 
 </body>

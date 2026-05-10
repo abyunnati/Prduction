@@ -10,7 +10,9 @@ html{
 
 body{
   font-family:'Poppins',sans-serif;
-  background:#f5f8ff;
+  background:
+    linear-gradient(180deg, rgba(8,43,116,0.03), rgba(8,43,116,0.01)),
+    linear-gradient(135deg,#f4f7fc 0%, #eef3fb 45%, #ffffff 100%);
   color:#081c43;
   overflow-x:hidden;
   position:relative;
@@ -18,22 +20,22 @@ body{
 
 .page-glow{
   position:fixed;
-  width:500px;
-  height:500px;
+  width:420px;
+  height:420px;
   border-radius:50%;
-  filter:blur(120px);
+  filter:blur(140px);
   z-index:-1;
-  opacity:.35;
+  opacity:.10;
 }
 
 .glow-one{
-  background:#0e44b5;
+  background:#9db7ea;
   top:-150px;
   right:-120px;
 }
 
 .glow-two{
-  background:#d9a126;
+  background:#e5d6ab;
   bottom:-200px;
   left:-140px;
 }
